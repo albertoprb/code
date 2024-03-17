@@ -1,1 +1,4 @@
-data/dataset_udemy-courses-scraper_2024-03-15_16-54-07-327.json
+# Don't update the data
+data/courses_detailed_text_data.csv
+data/courses_numerical_categorical_data.csv
+data/courses_udemy_raw.json
