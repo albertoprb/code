@@ -21,9 +21,10 @@ services:
 
 # Manage container
 # docker compose up
-# docker compose up --build -d
 # docker compose stop
 # docker compose down
 
+# Build container
+# docker compose up --build -d
 # Rebuilder container
 # docker compose build 
