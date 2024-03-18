@@ -1,4 +1,4 @@
 # Don't update the data
-data/courses_detailed_text_data.csv
-data/courses_numerical_categorical_data.csv
-data/courses_udemy_raw.json
+data/**
+transformation/transform_playground.ipynb
+.gitignore
