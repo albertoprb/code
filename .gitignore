@@ -2,3 +2,4 @@
 data/**
 transformation/transform_playground.ipynb
 .gitignore
+analysis/tmp/**

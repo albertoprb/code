@@ -1,14 +1,16 @@
-# To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
+# pip install -r requirements.txt
 
 debugpy
 
 # Data Analysis & visualization
 pandas==2.2.1
-numpy==1.26.0
+numpy==1.26.4
 matplotlib==3.8
 seaborn==0.13.2
 plotly==5.20.0
+nbformat==5.10.3
 beautifulsoup4==4.12.3
+summarytools==0.2.3
 
 # Machine learning
 scikit-learn==1.4
