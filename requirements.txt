@@ -16,6 +16,11 @@ scikit-learn==1.4
 # keras==3.0.5
 # xgboost==2.0.3
 
+# NLP
+spacy==3.7.4
+setuptools==69.2.0
+wheel==0.43.0
+
 # Dashboard
 fastapi[all]==0.110.0
 uvicorn[standard]==0.28.0

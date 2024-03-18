@@ -12,9 +12,10 @@ WORKDIR /code
 # Install git locally
 RUN apt-get update && apt-get install -y git
 
-# Install pip requirements
+# Install pip requirements & NLP dependencies
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m spacy download en_core_web_sm
 COPY ./src ./src
 
 # Run FastAPI server
