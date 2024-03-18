@@ -26,10 +26,9 @@ print("Dropping is_paid and has_certificate given >95% non-unique data")
 df = df.drop(columns=["is_paid"])
 df = df.drop(columns=["has_certificate"])
 
-# Dropping all textual columns
+# Dropping all textual columns except title
 df = df.drop(
     columns=[
-        "title",
         "url",
         "description",
         "headline",
