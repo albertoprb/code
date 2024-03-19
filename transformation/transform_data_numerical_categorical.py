@@ -49,7 +49,7 @@ Extract price from JSON
 print("Transforming price to keep only amount and currency")
 df_price_detail = pd.json_normalize(df["price_detail"]).reset_index(drop=True)
 df["price"] = df_price_detail["amount"]
-df["currency"] = df_price_detail["currency"]
+# df["currency"] = df_price_detail["currency"] # Leaving this out as it's the sameacross the whole dataset
 df = df.drop(columns=["price_detail"])
 
 
@@ -163,15 +163,16 @@ Udemy offers a 80% discount for new users and regular discounts
 Therefore, I'll normalize the price
 """
 
+# Leaving this out because it did not affect analysis
 
-print("Creating discounting prices and dropping discount columns")
+# print("Creating discounting prices and dropping discount columns")
 
-discount = 0.82  # 82% discount
-df['price_discounted'] = (df['price'] * (1-discount))
+# discount = 0.82  # 82% discount
+# df['price_discounted'] = (df['price'] * (1-discount))
 # rounding price discounted to 2 decimal digits
-df['price_discounted'] = df['price_discounted'].apply(
-    lambda x: '{:.2f}'.format(x)
-)
+# df['price_discounted'] = df['price_discounted'].apply(
+#    lambda x: '{:.2f}'.format(x)
+#)
 
 # dropping discount and discount_price columns
 df = df.drop(columns=['discount', 'discount_price'])
