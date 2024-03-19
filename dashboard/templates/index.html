@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Courses Exploratory Analaysis</title>
+    <style>[x-cloak]{display:none}</style>
+    <!-- Include htmx -->
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+    <!-- Include the Alpine library on your page -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+</head>
+<body class="flex items-start justify-center h-full bg-gray-50">
+    <div class="flex items-center justify-center w-full max-w-full">
+      <div class="mx-4">
+        <p class="text-2xl font-bold mb-4">Movie List</p>
+  
+        <table class="min-w-[50%] mb-4">
+          <thead class="border-b text-lg">
+            <tr>
+              <th class="border">Film Name</th>
+              <th class="border">Director</th>
+            </tr>
+          </thead>
+          <tbody class="text-center text-sm" id="table-body">
+            {% include 'partials/table.html' %}
+          </tbody>
+        </table>
+  
+        <button
+          class="px-3 py-1 bg-blue-600 text-white ml-4"
+          hx-get="/index/"
+          hx-target="#table-body"
+          hx-swap="beforeend"
+        >
+          Load More
+        </button>
+      </div>
+    </div>
+</body>
+</html>

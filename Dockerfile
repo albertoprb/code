@@ -16,10 +16,11 @@ RUN apt-get update && apt-get install -y git
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m spacy download en_core_web_sm
-COPY ./src ./src
+COPY ./ ./
 
 # Run FastAPI server
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+CMD ["uvicorn", "dashboard.service.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+# uvicorn dashboard.service.main:app --host 0.0.0.0 --port 8080 --reload
 
 
 # Docker commands
