@@ -9,7 +9,7 @@ Wenn ich den Standpunkt von einem Anbieter oder einem Kursleiter einnehmen, gibt
 * Welche Kategorie sind am erfolgereischsten? z.B. Data Science, Java, React.
 * Welche Faktoren sind die wichtigsten für den Erfolg des Kurses in diesen Kategorien?
 
-### **Dataset** 
+### **Datensatz** 
 
 Um diese Fragen zu beantworten, habe ich Udemy ausgewählt, weil Udemy eine Menge von Kursen aus verschiedenen Kategorien hat. Ich hoffe dass, ich durch das Verstehen der Udemy-Daten einen Einblick in die Fragen bekommen kann.
 
