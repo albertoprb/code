@@ -12,6 +12,7 @@ nbformat==5.10.3
 beautifulsoup4==4.12.3
 summarytools==0.2.3
 statsmodels==0.14.1
+ipywidgets
 
 # Machine learning
 scikit-learn==1.4
