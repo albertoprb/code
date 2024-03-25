@@ -22,6 +22,8 @@ templates_directory = os.path.normpath(
 )
 templates = Jinja2Templates(directory=templates_directory)
 
+from fastapi.staticfiles import StaticFiles
+app.mount("/assets", StaticFiles(directory="./dashboard/assets"), name="assets")
 
 def load_csv():
     # Load data
@@ -56,41 +58,20 @@ def read_root():
     return {"Container FastAPI + Docker!"}
 
 
-@app.get("/movies", response_class=HTMLResponse)
-async def movielist(request: Request,
-                    hx_request: Optional[str] = Header(None)):
-    films = [
-        {'name': 'Blade Runner', 'director': 'Ridley Scott'},
-        {'name': 'Pulp Fiction', 'director': 'Quentin Tarantino'},
-        {'name': 'Mulholland Drive', 'director': 'David Lynch'},
-    ]
-    context = {"request": request, 'films': films}
-    if hx_request:
-        return templates.TemplateResponse("partials/table.html", context)
-    return templates.TemplateResponse("index.html", context)
-
-
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard(request: Request,
                     hx_request: Optional[str] = Header(None)):
-    context = {"request": request, 'courses': courses_data}
-    return templates.TemplateResponse("dashboard.html", context)
+    # fig = px.strip(
+    #     courses_data, x="num_subscribers",
+    #     hover_data=courses_data.columns
+    # )
 
-
-@app.get("/dashboard/histogram", response_class=HTMLResponse)
-async def dashboard_chart(request: Request,
-                          hx_request: Optional[str] = Header(None)):
-    fig = px.strip(
-        courses_data, x="num_subscribers",
-        hover_data=courses_data.columns
-    )
-
-    chart_html = pio.to_html(fig, full_html=False)
+    # chart_html = pio.to_html(fig, full_html=False)
 
     context = {
         "request": request,
-        'courses': courses_data,
-        'chart': chart_html
+        'courses': courses_data.head(5)
+        # ,'chart': chart_html
     }
 
-    return templates.TemplateResponse("chart.html", context)
+    return templates.TemplateResponse("dashboard.html", context)
