@@ -4,3 +4,4 @@ transformation/transform_playground.ipynb
 .gitignore
 analysis/tmp/**
 dashboard/service/__pycache__/main.cpython-311.pyc
+dashboard/node_modules/**
