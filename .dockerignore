@@ -25,3 +25,9 @@
 **/values.dev.yaml
 LICENSE
 README.md
+**/transformation
+**/analysis
+/data/courses_udemy_raw.json
+/data/courses_text_data.csv
+/data/courses_text_data_sample.csv
+/data/courses_numerical_categorical_data_sample.csv
