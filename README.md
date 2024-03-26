@@ -72,25 +72,26 @@ Ich bevorzuge Web-Frameworks mit weniger Abstraktion, daher habe ich mich gegen 
 - :white_check_mark: Bereinigung, Transformierung, und Vorbereitung des Datensatzes.
 - :white_check_mark: Muster Dashboard-Webapp in FastAPI erstelllt.
 - :white_check_mark: Auswahl der Cloud Dienstleistung (Fly.io) und Deployment.
-- :arrow_forward: Explorativ-Analyse in Jupyter Notebook. Visualizierung mit Plotly.
+- :white_check_mark: Explorativ-Analyse in Jupyter Notebook. Visualizierung mit Plotly.
     - Welche Faktoren sind generell am wichtigsten für den Erfolg eines Kurses?
         - :white_check_mark: Definierung der Target Variablen.
-        - :arrow_forward: Einblicke in der Verteilung der Ziel-Variable.
+        - :white_check_mark: Einblicke in der Verteilung der Ziel-Variable.
         - :white_check_mark: Korrelationen zwischen numerischen Variablen.
-        - :black_square_button: Hypothesen generieren und analysieren. 
-        - :black_square_button: Analyse der kategorischen Variablen in Bezug auf die Ziel-Variable.
+        - :white_check_mark: Hypothesen generieren und analysieren. 
+        - :white_check_mark: Analyse der kategorischen Variablen in Bezug auf die Ziel-Variable.
     - Welche Kategorie sind am erfolgereischsten? z.B. Data Science, Java, React.
-        - :black_square_button: Erstellung der Analyse pro Subkategorie (mit ein Parameter).
-        - :black_square_button: Generieren die Einblicke und vergleichen die Kategorien.
+        - :white_check_mark:: Erstellung der Analyse pro Subkategorie (mit ein Parameter).
+        - :white_check_mark: Generieren die Einblicke und vergleichen die Kategorien.
 
 ### Extras
 
 Die folgende Schritte führe ich durch, falls ich genug Zeit habe, entweder im Laufe dieses Projekt oder nach dem Kurs.
 
-- :black_square_button: **Build dashboard:** Eingabe ist ein Kategorie (z.B Data science) oder ein Label (z.B. Java). Ausgabe ist das Dashboard.
-    - :black_square_button:	 Dashboard skizzieren. 
-    - :black_square_button:	 Ausbau Dashboard mit Plotly und FastAPI/HTMX/Tailwind
-        - :black_square_button:	 Auswahl eines UI-Kits
+- :white_check_mark: **Build dashboard:** Eingabe ist ein Kategorie (z.B Data science) oder ein Label (z.B. Java). Ausgabe ist das Dashboard.
+    - :white_check_mark:	 Dashboard skizzieren. 
+    - :white_check_mark:	 Ausbau Dashboard mit Plotly und FastAPI/HTMX/Tailwind
+        - :white_check_mark:	 Auswahl eines UI-Kits
+    - :arrow_forward: Build up charts for dashboard.
 - :black_square_button: **Text Mining mit Spacy**:  
     - :black_square_button:	Wie der Name des Kurses (`title`, und `headline` Variablen) seinen Erfolg beeinflussen kann.
     - :black_square_button:	"Entity Recognition" mit Spacy (`taget_audience`, `requirements`, `objectives` Variablen). 
