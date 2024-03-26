@@ -1,0 +1,22 @@
+<h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">Courses</h1>
+
+<p class="mt-2 text-lg text-gray-800 dark:text-gray-400">
+  Section description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus inventore aspernatur
+  <a class="mt-1 lg:mt-0 min-h-[24px] inline-flex items-center gap-x-1 py-0.5 px-2 text-gray-800 bg-gray-200/[.7] hover:bg-gray-200 rounded-md dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-200" href="#">
+    <span class="inline-block text-xs font-semibold">
+      variable name
+    </span>
+  </a>.
+</p>
+
+<div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-5 mt-4 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+  <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+    Udemy development courses by Number of Subscribers
+  </h3>
+  <p class="mt-1 text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+    Few courses have more than 500k subscribers.
+  </p>
+  {{ chart | safe }}
+</div>
+
+
