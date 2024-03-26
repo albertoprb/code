@@ -31,19 +31,29 @@ def load_courses(from_csv):
     return courses
 
 
-def plot_scatter(courses):
-    print("Preparing scatter plot")
+def plot_scatter(courses, subcategories=None):
+    print("# Preparing scatter plot")
+
+    # Get subcategory filteres data
+    courses_to_plot = courses
+    if subcategories is not None:
+        print("#### Filtering subcategories" + str(subcategories))
+        courses_to_plot = courses[courses['subcategory'].isin(subcategories)]
+    
     fig = px.scatter(
-        courses,
+        courses_to_plot,
         y="num_subscribers",
         x="udemy_id",
         hover_data=courses.columns,
         render_mode='webgl'
     )
+    fig.update_layout({
+        "paper_bgcolor": "rgba(0, 0, 0, 0)"
+    })
     fig_html = pio.to_html(fig, full_html=False)
-    print("Finished creating scatter plot")
+    print("# Finished creating scatter plot")
     return fig_html
 
 
 courses = load_courses(from_csv=csv_file_path)
-plot = plot_scatter(courses)
+plot = plot_scatter(courses=courses, subcategories=['Mobile Development'])

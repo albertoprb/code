@@ -3,5 +3,7 @@ data/**
 transformation/transform_playground.ipynb
 .gitignore
 analysis/tmp/**
-dashboard/service/__pycache__/main.cpython-311.pyc
+**/__pycache__/**
 dashboard/node_modules/**
+dashboard/service/udemy_stats/__pycache__/**
+dashboard/service/udemy_stats/__pycache__/courses_stats.cpython-311.pyc

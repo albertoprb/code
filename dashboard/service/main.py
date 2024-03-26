@@ -3,6 +3,8 @@ from fastapi import FastAPI, Request, Header
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates  # For HTML templates
 from fastapi.staticfiles import StaticFiles  # for mounting static files
+from fastapi.responses import RedirectResponse
+
 import os  # For file paths
 import debugpy  # For debugging
 
@@ -38,3 +40,8 @@ async def dashboard(request: Request,
     }
 
     return templates.TemplateResponse("dashboard.html", context)
+
+
+@app.get("/notebook")
+async def redirect_to_new_url():
+    return RedirectResponse(url="/assets/notebook.html")
