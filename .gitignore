@@ -7,3 +7,4 @@ analysis/tmp/**
 dashboard/node_modules/**
 dashboard/service/udemy_stats/__pycache__/**
 dashboard/service/udemy_stats/__pycache__/courses_stats.cpython-311.pyc
+.vscode/**

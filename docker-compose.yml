@@ -13,11 +13,7 @@ services:
       - 5678:5678
     volumes:
       - .:/code
-    depends_on:
-      - redis
-  redis:
-    image: redis:alpine
-    container_name: eda-redis
+
 
 # Manage container
 # docker compose up
