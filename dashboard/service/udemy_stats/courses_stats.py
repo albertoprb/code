@@ -82,7 +82,7 @@ class Courses:
     def filter_by_subcategories(self, subcategories):
         self.df = self.df[self.df["subcategory"].isin(subcategories)]
         return self.df
-   
+
     def price_categories(self):
         # Creating bins for each price category
         courses_with_price_category = self.df.copy()
